@@ -1,0 +1,107 @@
+settings:
+  application:
+    domain: 10.30.113.189:9800
+    host: 0.0.0.0
+    ishttps: false
+    mode: dev
+    name: processing
+    port: 9800
+    readtimeout: 1
+    writertimeout: 2
+    srcSource: formalization
+  database:
+    dbtype: mongodb
+    environ: formalization
+    host: 10.30.112.75
+    name: data_processing_online
+    password: Dp@2022#!
+    port: 27017
+    username: data_processing
+  domain:
+    gethost: 1
+    url: localhost:9800
+  email:
+    alias: ferry
+    host: smtp.163.com
+    pass: your password
+    port: 465
+    user: fdevops@163.com
+  gorm:
+    logmode: 0
+    maxidleconn: 0
+    maxopenconn: 20000
+    anonymousquery: 0
+    basedn: dc=fdevops,dc=com
+    bindpwd: 123456
+    binduserdn: cn=admin,dc=fdevops,dc=com
+    host: localhost
+    port: 389
+    tls: 0
+    userfield: uid
+  log:
+    compress: 1
+    consolestdout: 1
+    filestdout: 0
+    level: debug
+    localtime: 1
+    maxage: 30
+    maxbackups: 300
+    maxsize: 10240
+    path: ./log/jinn_data_processing.log
+  redis:
+    host: 10.30.113.189
+    port: 63798
+  ssl:
+    key: keystring
+    pem: temp/pem.pem
+  public:
+    isLocation: 0
+  nginx:
+    head: http://
+    host: jinn.dahuatech.com
+    port: 80
+    saveContext: /data/dahuafs/9933914/methods/description
+    descContext: /dldmp/dataprocess/description
+  jinn:
+    host: 10.30.113.142
+    port: 9090
+    username: 9933914
+    groupname: 9900888
+    password: DP@2022#!
+    domain:
+    batchsize: 1000
+  trainPlat:
+    head: http://
+    host: jinn.dahuatech.com
+    mountContext: /data/dahuafs
+    mountTrainContext: /extraStore/DataProcessing
+    imageName: dahuadltp/dataprocessing
+    imageTag: v2.0
+    resGroupName: jinndataprocess
+    resGroupLabel: other
+    resourceGroupCloudId: newcloud
+    resourceGroupServerCpu: 64
+    resourceCpuOverRation: 0.2
+    resourceGroupType: single
+    isMulti: 0
+    nodeToUse: 1
+    priority: 0
+    gpuType: 2
+    hardwareType: 0
+    tag:
+    resourceModel: 0
+    userGroup: 测试组
+    isLoop: false
+    frameType: PYTORCH
+    jobContext: /dlcp/mission/jobs
+    trainLogContext: /dlcp/trainMission/addFileOpen
+    runtimeContext: /dlcp/data_manage/task/runtimeInfo
+    taskOperateContext: /dlcp/data_manage/task/operation
+  testPlat:
+    head: http://
+    host: 10.30.113.116
+    port: 60000
+    loginContext: /usercenter/user/login
+    userDetailContext: /usercenter/api/v2/user
+    userGroupContext: /usercenter/api/v2/group/users
+    dataSetContext: /dldmp/dataset/api/datasetDir

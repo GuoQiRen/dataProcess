@@ -1,0 +1,99 @@
+settings:
+  application:
+    domain: 10.30.112.101:9800
+    host: 0.0.0.0
+    ishttps: false
+    mode: dev
+    name: processing
+    port: 9800
+    readtimeout: 1
+    writertimeout: 2
+    srcSource: testing
+  database:
+    dbtype: mongodb
+    environ: formalization
+    host: 10.30.113.44
+    name: data_processing_test2
+    password: Dp@2022#!@test2
+    port: 27016
+    username: data_processing_test2
+  domain:
+    gethost: 1
+    url: localhost:9800
+  email:
+    alias: ferry
+    host: smtp.163.com
+    pass: your password
+    port: 465
+    user: fdevops@163.com
+  gorm:
+    logmode: 0
+    maxidleconn: 0
+    maxopenconn: 20000
+  log:
+    compress: 1
+    consolestdout: 1
+    filestdout: 0
+    level: debug
+    localtime: 1
+    maxage: 30
+    maxbackups: 300
+    maxsize: 10240
+    path: ./log/jinn_data_processing.log
+  ssl:
+    key: keystring
+    pem: temp/pem.pem
+  redis:
+    host: 10.30.112.101
+    port: 63777
+  nginx:
+    head: http://
+    host: 10.30.112.101
+    port: 19600
+    saveContext: /data/dahuafs/dataprocess/methods/description
+    descContext: /dataprocess/methods/description
+  jinn:
+    host: 10.30.113.141
+    port: 10189
+    username: 9933914
+    groupname: 9900888
+    password: DP@2022#!
+    domain: dahuatech.com
+    batchsize: 1000
+  trainPlat:
+    head: http://
+    host: 10.30.115.2
+    mountContext: /data/dahuafs
+    mountTrainContext: /extraStore/DataProcessing
+    imageName: jinn-test/dataprocessing
+    resGroupName: jinn-1080ti
+    resGroupLabel: other
+    resourceGroupCloudId: default
+    resourceGroupServerCpu: 64
+    resourceCpuOverRation: 0.2
+    resourceGroupType: single
+    isMulti: 0
+    nodeToUse: 1
+    priority: 0
+    gpuType: 2
+    hardwareType: 0
+    tag:
+    resourceModel: 0
+    imageTag: v2.0
+    userGroup: 测试组
+    isLoop: false
+    frameType: PYTORCH
+    jobContext: /dlcp/mission/jobs
+    trainLogContext: /dlcp/trainMission/addFileOpen
+    runtimeContext: /dlcp/data_manage/task/runtimeInfo
+    taskOperateContext: /dlcp/data_manage/task/operation
+  testPlat:
+    head: http://
+    host: 10.30.21.134
+    port: 58080
+    loginContext: /usercenter/user/login
+    userDetailContext: /usercenter/api/v2/user
+    userTokenContext: /usercenter/api/v2/update/token
+    userGroupContext: /usercenter/api/v2/group/users
+    dataSetContext: /dldmp/dataset/api/datasetDir
+

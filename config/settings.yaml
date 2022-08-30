@@ -1,0 +1,35 @@
+settings:
+  serverConf:
+    host: 10.33.19.170
+    port: 19100
+    network: tcp4
+  redis:
+    host: 10.30.112.101
+    port: 63777
+  jinn:
+    host: 10.30.113.141
+    port: 10189
+    username: 9933914
+    groupname: 9900888
+    password: DP@2022#!
+    domain:
+    batchsize: 1000
+  database:
+    dbtype: mongodb
+    environ: formalization
+    host: 10.30.113.44
+    name: data_processing_test2
+    password: Dp@2022#!@test2
+    port: 27016
+    username: data_processing_test2
+  dataSet:
+    head: http://
+    host: 10.30.21.134
+    port: 58080
+    username: 9933914
+    password: DP@2022#!
+    domain:
+    loginContext: /usercenter/user/login
+    userTokenContext: /usercenter/api/v2/update/token
+    preCreateDatasetContext: /dldmp/dataset/api/tempversion
+    formalCreateDatasetContext: /dldmp/dataset/api/tempversion
